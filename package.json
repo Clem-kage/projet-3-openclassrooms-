@@ -1,0 +1,25 @@
+{
+  "name": "pj3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "node-sass code/scss/style.scss code/style/index.css",
+    "watch": "node-sass code/scss/style.scss code/style/index.css -w --ouput"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Clem-kage/projet-3-openclassrooms.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Clem-kage/projet-3-openclassrooms/issues"
+  },
+  "homepage": "https://github.com/Clem-kage/projet-3-openclassrooms#readme",
+  "dependencies": {
+    "sass": "^1.49.7" 
+  }
+}
+

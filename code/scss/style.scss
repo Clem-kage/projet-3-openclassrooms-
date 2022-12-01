@@ -1,0 +1,50 @@
+@import '_variable';
+@import '_animation';
+@import '_mixins';
+@import '_page_accueil';
+@import '_page_restaurant';
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;500&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;500&family=Roboto&family=Shrikhand&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/1.0.0/css/all.min.css');
+
+ //Responsive---------------------------------------
+ @media (min-width:767px){
+
+
+   .Ac-fonctionnement .disposition-desktop{
+    margin-top: 100px;
+    align-items: center;
+   }
+   .Ac-etape::before{
+    top: 0px;
+    left: 10px;
+   }
+   .Ac-etape{
+     width: 350px;
+     height: 110px;
+   }
+   .Ac-carte{
+     width: 300px;
+     margin-left: 10%;
+     height: 300px;
+   }
+   .disposition-desktop, .R-carte .disposition-desktop{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1300px;
+    justify-content: center;
+   }
+   .R-entree, .R-plats, .R-dessert{
+     width: 350px;
+   }
+   .R-carte button{
+      top: 90%;
+   }
+  footer ul{
+    margin-left: 40%;
+  }
+
+ }
+ // chaque css à une page scss dédié
+ // annotation: 'Ac-'= balises d'accueil  'R-'= balises de Restaurants  1 css pour l'accueuil et 1 pour les pages de restaurant----------------------------------------------------

@@ -1,0 +1,31 @@
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin gradient{
+    background: $secondaire;
+    background: linear-gradient(177deg, rgba(255,121,218,1) 9%, rgba(147,86,220,1) 71%);  
+}
+
+@each $time in $times{
+    @for $i from 1 through 4{
+  .#{$time} .plat:nth-child(#{$i}){
+   
+    animation: apparition #{('0.'+(5 + $i)+'s')} linear;
+   
+  }
+  }
+  }
+
+  @each $image in $images{
+
+    ##{nth($image, 1)} .image{
+      background-image: (#{nth($image, 2)});
+      background-size: cover;
+      background-position: center;
+      height: 70%;
+      width: 105%;
+    }
+    }

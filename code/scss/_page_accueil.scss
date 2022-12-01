@@ -1,0 +1,303 @@
+body {
+    margin: 0;
+    padding: 0; 
+    font-family: $fontfamtext;
+    background-color: $couleurbody;
+}
+header h1{
+  font-family: $fam-logo-titre;
+}
+a{
+  color: inherit;
+  text-decoration: inherit;
+}
+ul li{
+  list-style: none;
+}
+  em{
+    font-family: $fontfamtext;
+    font-style: normal;
+  }
+  main {
+    @include flex-center;
+    flex-direction: column;
+    overflow: hidden;
+   }
+  //  HEADER------------------------------------------------------------------
+  header {
+    position: relative;
+    margin-top: 0px;
+    @include flex-center;
+    width: 100vw;
+    height: 70px;
+    background-color: white;
+    box-shadow: 0px 1px 20px rgb(152, 155, 155) ;
+    z-index: 10;
+ }
+ header a{
+   margin-left: 20px;
+   position: absolute;
+   align-items: center;
+   left: 2%
+ }
+ header svg{
+   width:180px;
+   height:100px;
+ }
+//  HEADER--------------------------------------------------------------------------
+
+// PREMIERE PARTIE---------------------------------------------------------------------
+ .Ac-localisation em{
+   font-size: 18px;
+   width: 190px;
+ } 
+  .Ac-localisation {
+    @include flex-center;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(200, 204, 204);
+   }
+   .Ac-localisation i{
+     font-size: 20px;
+     margin-right: 10px;
+   }
+
+   .Ac-presentation h1, .Ac-presentation p{
+     text-align: center;
+   }
+   p{
+     font-size: 20px;
+     color: grey;
+   }
+  
+  .Ac-presentation {
+    @include flex-center;
+    width: 100%;
+    height: 340px;
+    flex-direction: column;
+     }
+    h1, h2{
+      font-size: 25px;
+      font-weight: 800;
+      }
+      button{
+        height: 60px;
+        align-content: center;
+        padding: 0px 19px;
+        border-radius: 30px;
+        border: none;
+        @include gradient;
+        color: white;
+        font-size: 19px;
+        box-shadow:  -1px 13px 31px -10px rgb(152, 155, 155);
+        cursor: pointer;
+      }
+      button:hover, .R-carte button:hover{
+        transition: .2s;
+        background: rgb(249,164,226);
+        background: linear-gradient(177deg, rgba(249,164,226,1) 9%, rgba(170,130,218,1) 71%);;  
+        box-shadow:  -1px 29px 41px -10px rgb(152, 155, 155);
+      }
+ // FIN PREMIERE PARTIE------------------------------------------------------------------
+ 
+ //SECTION FONCTIONNEMENT----------------------------------------------------------------
+  .Ac-fonctionnement {
+    width: 100vw; 
+    height: auto;
+    background-color: white;
+    margin-bottom: 10vh;
+    padding-left: 7%;
+   }
+   .Ac-etape i{
+     color: grey;
+     font-size: 25px;
+   }
+   .Ac-fonctionnement .Ac-etape:nth-child(4) i{
+     color: $primaire;
+   }
+   
+ .Ac-etape {
+    height: 80px;
+    width: 85%;
+    border-radius: 25px;
+    margin-bottom: 3vh;
+    margin-left: 5%;
+    position: relative; 
+    box-shadow: -1px 6px 25px -9px  rgb(152, 155, 155);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: $couleurbody;
+    cursor: pointer;
+ }
+ .Ac-etape:hover i{
+    color: $primaire;
+ }
+
+ @for $i from 1 through 4{
+    .Ac-etape:nth-child(#{$i})::before {
+    content: "#{($i )}";
+    position: absolute;
+    left: -15px;
+    top: 30%;
+    height: 30px;
+    width: 30px;
+    color: white;
+    background-color: $primaire;
+    border-radius: 50%;
+    @include flex-center;
+ }
+}
+
+ //FIN SECTION FONCTIONNEMENT----------------------------------------------------------------
+
+
+
+ //SECTION RESTAURANTS----------------------------------------------------------------
+ .Ac-carte{
+     border-radius: 10px;
+     margin-bottom: 2vh;
+     height: 25vh;
+     width: 90vw;
+     position: relative;
+     overflow: hidden;
+     box-shadow: 0px 1px 20px rgb(152, 155, 155);
+     background-color: white;
+ }
+ .Ac-carte p{
+    font-size: 18px;
+ }
+ .Ac-carte em{
+    font-size: 20px;
+ }
+  em{
+   font-size: 25px;
+ }
+ .image{
+     height: 70%;
+     width: 100%;
+  
+         .new{
+           position:  absolute;
+           padding: 2% 4%;
+           height: 22px;
+           background-color:  $couleurnotif;
+           color: rgb(80, 168, 120);
+           right: 4%;
+           top: 4%;
+           border-radius: 2px;
+         }
+ }
+ .contenu{
+    height: 15%;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0% 3%;
+    align-items: center;
+    margin: 1px auto;
+    position: relative;
+ }
+ .text{
+   height: 80%;
+ }
+ .text p{
+   margin-top: 3%;
+   text-overflow: ellipsis;
+   overflow: hidden;
+   white-space: nowrap;
+ }
+ svg {
+  width: 31px;
+  height: 30px;
+}
+.Ac-restaurants .n-style{
+  fill: white;
+  stroke: black;
+  stroke-width: 20px;
+  cursor: pointer;
+}
+input[type="checkbox"]{
+   display: none;
+}
+
+.R-titre {
+  color: black;
+  font-size: 30px;
+  padding: 0 0 0;
+  transition: .5s;
+  cursor: pointer;
+  font-weight: 300;
+  font-family: "Font Awesome 6 Free";
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  background-clip: text;
+  background-clip: content-box;
+}
+.R-titre i:hover, .contenu i:hover{
+  // display: block;
+  opacity: 1;
+  // background: $primaire;
+	background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(177deg, rgba(255,121,218,1) 9%, rgba(147,86,220,1) 71%); 
+  font-weight: 900;
+
+  // animation: 2s heart ease;
+}
+
+.contenu i{
+  // color: black;
+  font-size: 30px;
+  padding: 0 0 0;
+  transition: .5s ease;
+  cursor: pointer;
+  // font-weight: 300;
+  font-family: "Font Awesome 6 Free";
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+ // FIN SECTION RESTAURANTS----------------------------------------------------------------
+
+ //SECTION FOOTER ----------------------------------------------------------------
+
+footer{
+  background-color: black;
+  width: 100%;
+}
+footer a{
+  color: white;
+}
+footer svg{
+  width: 9px;
+  margin-top: 1%;
+  margin-right: 5px;
+}
+footer ul{
+  padding: 0px 0px 15px 26px;
+}
+footer ul li a:nth-child(1), footer ul li:nth-child(2){
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 20px;
+}
+footer ul li:nth-child(3) svg{
+  transform: rotate(-45deg);
+}
+footer .n-style{
+  fill: white;
+}
+footer .logo{
+  font-family: $fam-logo-titre;
+  color: white;
+  margin: 15px 0px;
+  font-size: 20px;
+}
+ // FIN SECTION FOOTER ----------------------------------------------------------------

@@ -1,0 +1,197 @@
+// pages restaurant
+
+// SECTION VISUEL----------------------------------------------------------------
+.R-image{
+    width: 100%;
+    height: 285px;
+    position: relative;
+    z-index: 1;
+  }
+    img{
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+      height: 100%
+    }
+ // FIN SECTION VISUEL----------------------------------------------------------------
+
+ // MENU DU RESTAURANT------------------------------------------------------------------------
+    .R-carte{
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      background-color: rgb(233, 233, 233);
+      margin-top: -30px;
+      border-radius: 30px 30px 0px 0px;
+      padding-bottom: 150px;
+    }
+    .R-carte h2{
+      font-size: 25px;
+      text-transform: uppercase;
+    }
+    .R-carte h1{
+      font-family: $fam-logo-titre;
+      font-size: 30px;
+    }
+    .R-titre{
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
+      margin: 20px auto;
+      align-items: center;
+    }
+    .R-titre  .n-style{
+       fill: rgb(233, 233, 233);
+       stroke: black;
+       stroke-width: 20px;
+       cursor: pointer;
+    }
+    h2{
+      padding: 0 5%;
+    }
+    .R-carte h2::after{
+      display: block;
+      background-color: $couleurnotif;
+      content: "";
+      margin-top: 1%;
+      width: 50px;
+      height: 4+px;
+    }
+    .R-entree, .R-plats, .R-dessert{
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      margin-bottom: 50px;
+      height: auto;
+    }
+
+    .plat{
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      background-color: white;
+      box-shadow:  -1px 13px 31px -10px rgb(152, 155, 155);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+  .prix{
+    margin-right: 0%;
+    right: 2%;
+    top: 0%;
+    padding: 10% 2%;
+    transition: .8s;
+    background-color: white; 
+    height: 100%;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    margin-top: 7%;
+  }
+  .plat .contenu{
+    margin: 0 auto;
+    height: 100px;
+    align-self: center;
+    flex-wrap: wrap;
+    text-overflow: ellipsis;
+    flex-wrap: nowrap;
+    display: flex;
+    align-items: center;
+  }
+  .plat em{
+    font-size: 23px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    flex-wrap: nowrap;
+    overflow: hidden;
+  }
+  .R-carte button{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .prix::after{
+    display: inline;
+    content: "\f153";
+    font-weight: 900;
+    font-family: "Font Awesome 6 Free";
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+  .plat .text{
+    transform: translateY(10%);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .plat input[type='checkbox']:checked + label .cub{
+    animation: validation 1.5s ease-in-out;
+  }
+  .contenu:hover > .cub {
+    right: -1%;
+  }
+  .contenu:hover > .cub::after {
+    transform: rotate(0deg);
+  }
+  .contenu:hover > .prix{
+    margin-right:18%;
+  }
+  .cub{
+    width: 20%;
+    height: 500px; 
+    position: absolute;
+    background-color: $couleurnotif;
+    right: -23%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .6s;
+  }
+  .cub::after{
+    content:"\f058";
+    font-weight: 900;
+    font-size: 25px;
+    color: white;
+    font-family: "Font Awesome 6 Free";
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    transform: rotate(-180deg);
+    transition: .8s ease-out;
+  }
+  .R-dessert .plat:nth-child(5) {
+    animation: apparition 1s linear; }
+  .R-plats .plat:nth-child(5) {
+    animation: apparition 0.9s linear; }
+  .R-entree .plat:nth-child(5) {
+    animation: apparition 0.9s linear; }
+          
+      
+  
+   // MENU DU RESTAURANT------------------------------------------------------------------------
+
+   //DISPLAY LOADER-----------------------------------------------------------------------------
+  #accueil{
+    animation: attend ease 3.5s;
+  }
+   .loader{
+     width: 100px;
+     height: 100px;
+     position: absolute;
+     animation: chargement 3s ease-out;
+     top: 20%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     border-radius: 50%;
+     border: 10px solid $primaire;
+     opacity: 0;
+   }
+  
