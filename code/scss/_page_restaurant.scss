@@ -40,22 +40,40 @@
       margin: 20px auto;
       align-items: center;
     }
+    .R-titre i{
+      // color: black;
+      font-size: 30px;
+      padding: 0 0 0;
+      transition: .5s ease;
+      cursor: pointer;
+      // font-weight: 300;
+      font-family: "Font Awesome 6 Free";
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+    }
+    
     .R-titre  .n-style{
        fill: rgb(233, 233, 233);
        stroke: black;
        stroke-width: 20px;
        cursor: pointer;
     }
-    h2{
-      padding: 0 5%;
+    .R-titre h2{
+      font-family: $fam-logo-titre;
+      font-size: 30px;
     }
-    .R-carte h2::after{
+    .R-entree h2::after, .R-plats h2::after, .R-dessert h2::after {
       display: block;
       background-color: $couleurnotif;
       content: "";
       margin-top: 1%;
       width: 50px;
       height: 4+px;
+    }
+    .R-entree h2, .R-plats h2, .R-dessert h2{
+      padding: 0 5%;
     }
     .R-entree, .R-plats, .R-dessert{
       width: 90%;

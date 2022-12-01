@@ -62,7 +62,7 @@ ul li{
      margin-right: 10px;
    }
 
-   .Ac-presentation h1, .Ac-presentation p{
+   .Ac-presentation h1, .Ac-presentation h2, .Ac-presentation p{
      text-align: center;
    }
    p{
@@ -80,10 +80,12 @@ ul li{
       font-size: 25px;
       font-weight: 800;
       }
+    
+    
       button{
         height: 60px;
         align-content: center;
-        padding: 0px 19px;
+        padding: 0px 19px; 
         border-radius: 30px;
         border: none;
         @include gradient;
